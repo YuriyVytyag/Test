@@ -11,7 +11,7 @@ const Home = lazy(() => import('./Home/Home'));
 
 export const App = () => {
   return (
-    <Router basename="">
+    <Router basename="/">
       <>
         <Searchbar />
         <Suspense fallback={<p>Loading...</p>}>
