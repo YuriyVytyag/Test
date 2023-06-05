@@ -16,8 +16,8 @@ export const App = () => {
         <Searchbar />
         <Suspense fallback={<p>Loading...</p>}>
           <Routes>
-            <Route path="/test" element={<Home />} />
-            <Route path="/test/tweets" element={<CardList />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/tweets" element={<CardList />} />
           </Routes>
         </Suspense>
       </>
