@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
 export const List = styled.ul`
   overflow: auto;
   margin: 0 auto;
+  padding: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;

@@ -7,27 +7,25 @@ function CardList() {
   const [currentPage, setCurrentPage] = useState(1);
 
   const fetchUsers = () => {
-    setTimeout(() => {
-      fetch(
-        `https://647a0c79a455e257fa643dfd.mockapi.io/users?page=${currentPage}&limit=3`
-      )
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Rate limit exceeded');
-          }
-          return response.json();
-        })
-        .then(data => {
-          if (currentPage === 1) {
-            setUsers([...data]);
-          } else {
-            setUsers(prevUsers => [...prevUsers, ...data]);
-          }
-        })
-        .catch(error => {
-          console.error(error);
-        });
-    }, 1000);
+    fetch(
+      `https://647a0c79a455e257fa643dfd.mockapi.io/users?page=${currentPage}&limit=3`
+    )
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Rate limit exceeded');
+        }
+        return response.json();
+      })
+      .then(data => {
+        if (currentPage === 1) {
+          setUsers([...data]);
+        } else {
+          setUsers(prevUsers => [...prevUsers, ...data]);
+        }
+      })
+      .catch(error => {
+        console.error(error);
+      });
   };
 
   useEffect(() => {
