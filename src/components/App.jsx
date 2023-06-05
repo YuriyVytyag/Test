@@ -1,5 +1,5 @@
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
+// import { lazy, Suspense } from 'react';
 
 import CardList from './CardList/CardList';
 import Searchbar from './Searchbar/Searchbar';
