@@ -30,7 +30,7 @@ function CardList() {
 
   useEffect(() => {
     fetchUsers();
-  }, [currentPage]);
+  });
 
   const handleLoadMore = () => {
     setCurrentPage(prevPage => prevPage + 1);
