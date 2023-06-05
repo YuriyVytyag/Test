@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
 // import CardList from './CardList/CardList';
@@ -12,13 +12,15 @@ const Home = lazy(() => import('./Home/Home'));
 export const App = () => {
   return (
     <>
-      <Searchbar />
-      <Suspense fallback={<p>Loading...</p>}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/tweets" element={<CardList />} />
-        </Routes>
-      </Suspense>
+      <Router>
+        <Searchbar />
+        <Suspense fallback={<p>Loading...</p>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/tweets" element={<CardList />} />
+          </Routes>
+        </Suspense>
+      </Router>
     </>
   );
 };
