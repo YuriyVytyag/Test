@@ -27,7 +27,7 @@ function Card({ user }) {
       .catch(error => {
         console.error(error);
       });
-  }, []);
+  }, [user.followers]);
 
   const handleFollow = () => {
     if (following) {
