@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import Card from 'components/Card/Card';
 import { List, LoadMoreButton, Wrapper } from './CardList.styled';
